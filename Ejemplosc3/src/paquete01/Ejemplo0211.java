@@ -11,13 +11,13 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo02 {
+public class Ejemplo0211 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-            Scanner entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         // Creación de arreglo bidimensionales        
         // forma 1
         int[][] arreglo1 = new int[3][4]; //
@@ -31,8 +31,12 @@ public class Ejemplo02 {
             for (int c = 0; c < arreglo1[f].length; c++) {
                 System.out.printf("ingrese numero para posicion [%d][%d]",
                         f, c);
-                arreglo1[f][c]=ingreso;
-               
+                if (ingreso >= 10 && ingreso % 2 == 0) {
+                    arreglo1[f][c] = 0;
+                } else {
+                    arreglo1[f][c] = ingreso;
+
+                }
             }
         }
 
@@ -45,5 +49,6 @@ public class Ejemplo02 {
     }
 
 }
+
 
 
